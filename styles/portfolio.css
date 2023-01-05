@@ -26,12 +26,16 @@ section {
   background-image: url("../images/header_bg.png"),
     url("../images/developer.png");
   background-repeat: no-repeat;
-  background-position: bottom right, left;
+  background-position: bottom right, 23px;
+}
+.header img {
+  margin-bottom: -5px;
+  margin-right: -170px;
 }
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 50px 226px;
+  padding: 50px 226px;
   align-items: center;
 }
 .nav-title {
@@ -39,6 +43,7 @@ nav {
   font-weight: 800;
   font-size: 45px;
   line-height: 61px;
+  margin-left: -20px;
 }
 .r-color {
   color: var(--text-primary);
@@ -51,6 +56,22 @@ nav ul li {
   list-style-type: none;
   margin-left: 50px;
 }
+.btn-group {
+  display: flex;
+  gap: 30px;
+}
+.btn-contact {
+  background-color: white !important;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  padding: 18px 35px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  cursor: pointer;
+}
 .btn-primary {
   font-weight: 700;
   font-size: 20px;
@@ -61,7 +82,16 @@ nav ul li {
   color: var(--text-white);
   padding: 18px 35px;
   cursor: pointer;
+  display: flex;
+  gap: 10px;
 }
+.resume .btn-primary {
+  margin: 0 auto;
+}
+nav .btn-primary {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 /* banner style */
 .banner {
   display: flex;
@@ -71,6 +101,7 @@ nav ul li {
 }
 .banner-left {
   width: 585px;
+  margin-top: -80px;
 }
 .banner-title {
   font-weight: 700;
@@ -224,21 +255,32 @@ nav ul li {
   padding: 130px 230px;
 }
 .social {
-    max-width: 562px;
+  max-width: 562px;
 }
-.contact .section-title,.contact .section-description  {
+.contact .section-title,
+.contact .section-description {
   text-align: left !important;
 }
-.contact input, textarea {
-    height: 64px;
-    padding: 18px 30px;
-    margin-bottom: 24px;
-    border: 0;
-    width: 100%;
+.contact input,
+textarea {
+  height: 64px;
+  padding: 18px 30px;
+  margin-bottom: 24px;
+  border: 0;
+  width: 100%;
 }
 .contact textarea {
-    height: unset;
+  height: unset;
 }
-.contact input[type="submit"]{
-    width: unset;
+.contact input[type="submit"] {
+  width: unset;
+}
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--text-dark3);
+}
+.social a {
+  padding-right: 24px;
 }
